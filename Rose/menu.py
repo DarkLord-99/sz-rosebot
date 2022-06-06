@@ -8,7 +8,7 @@ fbuttons = InlineKeyboardMarkup(
         [
         [
             InlineKeyboardButton(
-                text="👥Support Group", url="https://t.me/+4kz4z9zCyLdjZjI1"
+                text="👥 Support Group", url="https://t.me/+4kz4z9zCyLdjZjI1"
             )
             
         ],
@@ -22,18 +22,18 @@ keyboard =InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(
-                text="English🇬🇧", callback_data="languages_en"
+                text="English 🇬🇧", callback_data="languages_en"
             ),
             InlineKeyboardButton(
-                text="සිංහල🇱🇰", callback_data="languages_si"
+                text="සිංහල 🇱🇰", callback_data="languages_si"
             )
         ],
         [
             InlineKeyboardButton(
-                text="हिन्दी🇮🇳", callback_data="languages_hi"
+                text="हिन्दी 🇮🇳", callback_data="languages_hi"
             ),
             InlineKeyboardButton(
-                text="Italiano🇮🇹", callback_data="languages_it"
+                text="Italiano 🇮🇹", callback_data="languages_it"
             )
         ],
         [

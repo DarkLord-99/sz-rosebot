@@ -93,7 +93,7 @@ home_keyboard_pm = InlineKeyboardMarkup(
         ],
         [
            InlineKeyboardButton(
-                text=" ℹ️ About", callback_data="_about"
+                text=" 😎 About", callback_data="_about"
             ),
             InlineKeyboardButton(
                 text="🌍 languages ", callback_data="_langs"
@@ -101,18 +101,9 @@ home_keyboard_pm = InlineKeyboardMarkup(
         ],
         [
             InlineKeyboardButton(
-                text="📮 How To Use Me", callback_data="bot_commands"
+                text="ℹ️ Help", callback_data="bot_commands"
             ),
-        ],
-        [
-            InlineKeyboardButton(
-                text="🌐 My Website",
-                url=f"https://szrosebot.ml",
-            ),
-            InlineKeyboardButton(
-                text="🔰News Channel",
-                url=f"https://t.me/szroseupdates",
-            )
+        ] 
         ],
     ]
 )
@@ -180,13 +171,13 @@ async def start(client, message: Message, _):
         for user in users:
           served_users.append(int(user["bot_users"]))
         await message.reply(f"""
-[👋]({random.choice(IMG)}) Hey there {message.from_user.mention}, 
+[👋]({random.choice(IMG)}) Hello there {message.from_user.mention} 
 
-   My name is Rose, an  advanced telegram Group management Bot For helpYou Protect Your Groups & Suit For All Your Needs. 
+   My name is J.A.R.V.I.S, an  advanced Group management Bot For help You Protect Your Groups & Suit For All Your Needs. 
 I currently manage about `{len(served_chats)}` groups.I have over `{len(served_users)}` users
 
 ⚒ Send Me /help For Get Commands. 
-👨‍💻Dᴇᴠᴇʟᴏᴘᴇʀ : @supunma
+👨‍💻Dᴇᴠᴇʟᴏᴘᴇʀ : @hellodarklord
 """,
             reply_markup=home_keyboard_pm,
         )
@@ -271,14 +262,14 @@ async def startcq(client,CallbackQuery, _):
         served_users.append(int(user["bot_users"]))
     await CallbackQuery.message.edit(
             text=f"""
-👋 Hey there {CallbackQuery.from_user.mention}, 
+Hello 👋 there {CallbackQuery.from_user.mention}, 
 
-   My name is Rose ,an  advanced telegram Group management Bot For help 
+   My name is J.A.R.V.I.S ,an  advanced Group management Bot For help 
 You Protect Your Groups & Suit For All Your Needs. 
 I currently manage about `{len(served_chats)}` groups.I have over `{len(served_users)}` users
 
  ⚒ Send Me /help For Get Commands. 
-👨‍💻Dᴇᴠᴇʟᴏᴘᴇʀ : @supunma
+👨‍💻Dᴇᴠᴇʟᴏᴘᴇʀ : @hellodarklord
 """,
             disable_web_page_preview=True,
             reply_markup=home_keyboard_pm)
@@ -293,7 +284,7 @@ async def help_parser(name, keyboard=None):
 I'm a group management bot with some useful features.
 You can choose an option below, by clicking a button.
 If you have any bugs or questions on how to use me, 
-have a look at my [Docs](https://szsupunma.gitbook.io/rose-bot/), or head to @szteambots.
+have a look at my [Docs](https://szsupunma.gitbook.io/rose-bot/).
 **All commands can be used with the following: / **""",
         keyboard,
     )
@@ -329,7 +320,7 @@ async def help_button(client, query, _):
                 "Here is the help for", HELPABLE[module].__MODULE__
             )
             + HELPABLE[module].__HELP__
-            + "\n👨‍💻Dᴇᴠᴇʟᴏᴘᴇʀ : @supunma"
+            + "\n👨‍💻Dᴇᴠᴇʟᴏᴘᴇʀ : @hellodarklord"
         )
         if hasattr(HELPABLE[module], "__helpbtns__"):
                        button = (HELPABLE[module].__helpbtns__) + [[InlineKeyboardButton("« Back", callback_data="bot_commands")]]

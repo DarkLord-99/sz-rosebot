@@ -69,8 +69,8 @@ async def start_bot():
  _____________________________________________   
 |                                             |  
 |          Deployed Successfully              |  
-|         (C) 2021-2022 by @szteambots        | 
-|          Greetings from supun  :)           |
+|         (C) 2022 by @hellodarklord       | 
+|          Greetings from DarkLord :)           |
 |_____________________________________________|  
                                                                                                
     """)
@@ -165,12 +165,13 @@ async def start(client, message: Message, _):
         for user in users:
           served_users.append(int(user["bot_users"]))
         await message.reply(f"""
-[👋]({random.choice(IMG)}) Hello there {message.from_user.mention} 
+[👋]({random.choice(IMG)}) Hello {message.from_user.mention},
 
    My name is J.A.R.V.I.S, an  advanced Group management Bot For help You Protect Your Groups & Suit For All Your Needs. 
 I currently manage about `{len(served_chats)}` groups.I have over `{len(served_users)}` users
 
 ⚒ Send Me /help For Get Commands. 
+
 👨‍💻Dᴇᴠᴇʟᴏᴘᴇʀ : @hellodarklord
 """,
             reply_markup=home_keyboard_pm,
@@ -256,13 +257,14 @@ async def startcq(client,CallbackQuery, _):
         served_users.append(int(user["bot_users"]))
     await CallbackQuery.message.edit(
             text=f"""
-Hello 👋 there {CallbackQuery.from_user.mention}, 
+Hello 👋  {CallbackQuery.from_user.mention}, 
 
-   My name is J.A.R.V.I.S ,an  advanced Group management Bot For help 
+   My name is J.A.R.V.I.S, an  advanced Group management Bot For help 
 You Protect Your Groups & Suit For All Your Needs. 
 I currently manage about `{len(served_chats)}` groups.I have over `{len(served_users)}` users
 
  ⚒ Send Me /help For Get Commands. 
+
 👨‍💻Dᴇᴠᴇʟᴏᴘᴇʀ : @hellodarklord
 """,
             disable_web_page_preview=True,
@@ -277,8 +279,6 @@ async def help_parser(name, keyboard=None):
 **Welcome to help menu**
 I'm a group management bot with some useful features.
 You can choose an option below, by clicking a button.
-If you have any bugs or questions on how to use me, 
-have a look at my [Docs](https://szsupunma.gitbook.io/rose-bot/).
 **All commands can be used with the following: / **""",
         keyboard,
     )
